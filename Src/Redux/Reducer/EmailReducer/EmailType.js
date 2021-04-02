@@ -1,0 +1,4 @@
+export const CHANGE_EMAIL = 'CHANGE_EMAIL'
+export const EMAIL_FOCUS='EMAIL_FOCUS'
+export const EMAIL_ERROR='EMAIL_ERROR'
+export const EMAIL_BLUR='EMAIL_BLUR'

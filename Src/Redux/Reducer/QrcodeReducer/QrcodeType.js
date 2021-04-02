@@ -1,0 +1,2 @@
+export const IS_VISIBLE='IS_VISIBLE'
+export const INVISIBLE='INSVISIBLE'
