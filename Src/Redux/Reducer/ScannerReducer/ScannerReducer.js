@@ -10,7 +10,7 @@ const data ={
 
 const scannerReducer=(state=data,action)=>{
     switch(action.type){
-        
+
         case SHOW_SCANNER:
             return {...state, show:true}
         case HIDE_SCANNER:
@@ -18,7 +18,7 @@ const scannerReducer=(state=data,action)=>{
         case RESULT:
             return {...state,result:action.payload}
         case SCAN_AGAIN:
-            return {...state,result:''}
+            return {...state,result:null}
         default:
             return state
     }

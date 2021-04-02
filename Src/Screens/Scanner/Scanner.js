@@ -3,10 +3,10 @@ import { Text, TouchableOpacity, View,StyleSheet, Image } from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import Modal from 'react-native-modal'
 import ModalHeader from '../../Component/ModalHeader/ModalHeader';
-import{onSuccessScanned,onScanAgain} from '../../Redux/Actions/ScannerAction'
+import{onSuccessScanned,onScanAgain,hideScanner} from '../../Redux/Actions/ScannerAction'
 import { connect } from 'react-redux';
 import Button from '../../Component/Button/Button';
-function Scanner({scanner,user,onSuccessScanned,isVisible,onLeftPress,onSwipeComplete,onScanAgain}) {
+function Scanner({scanner,user,onSuccessScanned,isVisible,onLeftPress,onSwipeComplete,onScanAgain,hideScanner}) {
 
   
  const {result}=scanner
@@ -28,8 +28,8 @@ console.log(result)
                   </View>
                   <View style={{flex:0.3,margin:10,justifyContent:'center'}}>
 
-                    <Button variant="primary" label="Scan again"/>
-                    <Button variant="transparent" label="enough"/>
+                    <Button variant="primary" onPress={onScanAgain} label="Scan again"/>
+                    <Button variant="transparent" onPress={hideScanner} label="enough"/>
 
                   </View>
                 </View>
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
 const mapDispatchToProps={
   onSuccessScanned,
   onScanAgain,
+  hideScanner
 }
 
 const mapStateToProps=(state)=>{
