@@ -109,7 +109,7 @@ const styles= StyleSheet.create({
     },
 
     inputContainer:{
-        flex:0.6,
+        flex:0.4,
         justifyContent:'space-around',
         
         margin:20,
